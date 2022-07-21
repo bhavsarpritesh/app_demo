@@ -17,7 +17,39 @@ function func1() {
 }
 
 func1().then(function () {
-    console.log("Harry: Thanks for resolving")
+    console.log("Harry: Thanks for resolving");
 }).catch(function (error) {
-    console.log("Sorry please try again later " + error)
+    console.log("Sorry please try again later " + error);
 })
+
+
+function mypassword(){
+    return new Promise( function(resolve,reject){
+
+        const a = 20,b = 10;
+    
+     if(a>=b){
+        console.log("A is greater than B");
+        resolve();
+     }
+     else{
+        console.log("B is greater");
+        reject();
+     }
+
+    })
+        
+    }
+
+    mypassword().then(function(){
+        console.log("condition is resolved");
+    }).catch(function(error){
+        console.log("condition is rejected"+error);
+    })
+
+
+
+
+
+
+
